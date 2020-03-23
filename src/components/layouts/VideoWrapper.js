@@ -1,5 +1,4 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
 import { Player, Info } from '../../components';
 
 const VideoWrapper = ( {video} ) => {
@@ -9,10 +8,10 @@ const VideoWrapper = ( {video} ) => {
 
     const videoURL =  `https://www.youtube.com/embed/${video.id.videoId}`;
     return (
-        <Grid container xs={8}>
+        <>
             <Player videoURL={videoURL}/>
             <Info video={video}/>
-        </Grid>
+        </>
     )
 }
 
