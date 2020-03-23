@@ -20,11 +20,11 @@ export class SearchBar extends Component {
 
     render() {
         return (
-            <Paper>
-            <form onSubmit={(event) => this.submitHandler(event)}>
-                <TextField placeholder="Type what you want to look for" onChange={(event) => this.searchHandler(event)}/>
-            </form> 
-        </Paper>
+            <Paper style={{padding: '20px', marginBottom: '20px'}}>
+                <form onSubmit={(event) => this.submitHandler(event)}>
+                    <TextField placeholder="Type what you want to look for" onChange={(event) => this.searchHandler(event)} label="Search" style={{width: '100%'}}/>
+                </form> 
+            </Paper>
         )
     }
 }

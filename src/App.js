@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { SearchBar, Player, Info, Recomendations } from './components';
+import { Grid, Paper } from '@material-ui/core';
 import youtube from './api/youtube';
 
 class App extends Component {
@@ -25,12 +26,12 @@ class App extends Component {
 
     render() {
         return (
-            <>
+            <Grid>
                 <SearchBar submitHandler={this.submitHandler}/>
-                <Player />
+                <Player video={this.state.currentVideo}/>
                 <Info />
                 <Recomendations />
-            </>
+            </Grid>
         )
     }
 }
