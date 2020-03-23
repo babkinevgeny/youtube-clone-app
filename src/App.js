@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { SearchBar, Player, Info, Recomendations } from './components';
+import { SearchBar, Recomendations } from './components';
+import VideoWrapper from './components/layouts/VideoWrapper';
 import { Grid, Paper } from '@material-ui/core';
 import youtube from './api/youtube';
 
@@ -28,8 +29,7 @@ class App extends Component {
         return (
             <Grid>
                 <SearchBar submitHandler={this.submitHandler}/>
-                <Player video={this.state.currentVideo}/>
-                <Info />
+                <VideoWrapper video={this.state.currentVideo}/>
                 <Recomendations />
             </Grid>
         )

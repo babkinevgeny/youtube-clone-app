@@ -1,14 +1,10 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 
-const Player = ( {video} ) => {
-    if ( !video ) {
-        return <div>Loading...</div>
-    }
-
-    const videoURL =  `https://www.youtube.com/embed/${video.id.videoId}`;
+const Player = ( {videoURL} ) => {
+    
     return (
-        <Grid spasing={2} xs={8} style={{marginBottom: '20px'}}>
+        <Grid spasing={2} xs={12} style={{marginBottom: '20px'}}>
             <iframe 
                 width="100%" 
                 height="100%" 
