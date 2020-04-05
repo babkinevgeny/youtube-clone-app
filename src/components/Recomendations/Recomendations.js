@@ -1,5 +1,4 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
 import RecomendationItem from './RecomendationItem/RecomendationItem';
 
 const Recomendations = ( {videos, recomendationClickHandler} ) => {

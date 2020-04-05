@@ -1,6 +1,6 @@
 //import React from 'react';
 import React, { Component } from 'react';
-import { Paper, TextField } from '@material-ui/core';
+import { Grid, Paper, TextField } from '@material-ui/core';
 
 export class SearchBar extends Component {
     state = {
@@ -20,11 +20,15 @@ export class SearchBar extends Component {
 
     render() {
         return (
-            <Paper style={{padding: '20px', marginBottom: '20px'}}>
-                <form onSubmit={(event) => this.submitHandler(event)}>
-                    <TextField placeholder="Type what you want to look for" onChange={(event) => this.searchHandler(event)} label="Search" style={{width: '100%'}}/>
-                </form> 
-            </Paper>
+            <Grid container>
+                <Grid item xs={12}>
+                    <Paper style={{padding: '10px', marginBottom: '20px'}}>
+                        <form onSubmit={(event) => this.submitHandler(event)}>
+                            <TextField placeholder="Type what you want to look for" onChange={(event) => this.searchHandler(event)} label="Search" style={{width: '100%'}}/>
+                        </form> 
+                    </Paper>
+                </Grid>
+            </Grid>
         )
     }
 }

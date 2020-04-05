@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { SearchBar, Recomendations } from './components';
 import VideoWrapper from './components/layouts/VideoWrapper';
-import { Grid, Paper, Container } from '@material-ui/core';
+import { Grid, Container } from '@material-ui/core';
 import youtube from './api/youtube';
 
 class App extends Component {
@@ -35,7 +35,7 @@ class App extends Component {
             <Container fluid>
                 <SearchBar submitHandler={this.submitHandler}/>
                 <Grid container spacing={2}>
-                    <Grid xs={8}>
+                    <Grid item xs={8}>
                         <VideoWrapper video={currentVideo}/>
                     </Grid>
                     <Grid item xs={4} >

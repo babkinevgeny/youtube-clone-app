@@ -1,13 +1,19 @@
 import React from 'react';
-import { Grid, Typography } from '@material-ui/core';
+import { Grid, Paper, Typography } from '@material-ui/core';
 
 const RecomendationItem = ( {video, clicked} ) => {
     return (
-        <Grid item spacing={2} style={{cursor: 'pointer', marginBottom: '20px'}} onClick={() => clicked(video)}>
-            <img src={video.snippet.thumbnails.medium.url}/>
-            <Typography variant="subtitle2">{video.snippet.title}</Typography>
-            <Typography variant="subtitle2">{video.snippet.channelTitle}</Typography>
-        </Grid>
+        <Paper style={{marginBottom: '20px', padding: '10px', cursor: 'pointer'}} onClick={() => clicked(video)}>
+            <Grid container spacing={2}>
+                <Grid item xs={6}>
+                    <img src={video.snippet.thumbnails.medium.url} style={{width: '100%'}} alt={video.snippet.title}/>
+                </Grid>
+                <Grid item xs={6}>
+                    <Typography variant="subtitle2">{video.snippet.title}</Typography>
+                    <Typography variant="subtitle2">{video.snippet.channelTitle}</Typography>
+                </Grid>
+            </Grid>
+        </Paper>        
     )
 }
 
